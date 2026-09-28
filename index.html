@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kavi Spices — Premium GI Tagged Indian Spices | Bulk Export & B2B</title>
+  <meta name="description" content="Kavi Spices exports premium GI tagged, single-origin Indian spices to international buyers. Bulk B2B orders with full export documentation — FOB and CIF terms. UAE, USA, EU." />
+  <meta property="og:title" content="Kavi Spices — Premium GI Tagged Indian Spices | Bulk Export & B2B" />
+  <meta property="og:description" content="Premium GI tagged, single-origin Indian spices for international buyers. Full export documentation — COA, phytosanitary, FOB & CIF. Bangalore, India." />
+  <meta property="og:image" content="assets/hero image.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kavispices.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #faf6ef;
+      color: #3a2e24;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ===================== VARIABLES ===================== */
+    :root {
+      --green-dark: #0f2318;
+      --green-mid: #1a3a2a;
+      --green-light: #2e5c40;
+      --gold: #e8a020;
+      --gold-dark: #c4622d;
+      --cream: #faf6ef;
+      --warm-gray: #e8e0d4;
+      --text-dark: #1a3a2a;
+      --text-body: #5a4a3a;
+      --text-muted: #8a7a6a;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    /* ===================== TYPOGRAPHY ===================== */
+    .font-heading { font-family: 'Cormorant Garamond', serif; }
+    .text-gold { color: var(--gold); }
+    .text-gold-dark { color: var(--gold-dark); }
+    .text-green { color: var(--green-mid); }
+    .uppercase-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ===================== LAYOUT ===================== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section { width: 100%; }
+
+    /* ===================== HEADER ===================== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+    header.scrolled {
+      background: var(--green-dark);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 120px;
+      padding: 0 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+    .logo span { color: var(--gold); }
+    nav { display: flex; align-items: center; gap: 36px; }
+    nav a {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--gold); }
+    nav a.active { color: var(--gold); }
+    .nav-cta {
+      padding: 10px 22px;
+      background: var(--gold-dark);
+      color: var(--white) !important;
+      font-size: 0.68rem !important;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: #a84e22 !important; color: var(--white) !important; }
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .mobile-menu-btn span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: var(--green-dark);
+      padding: 20px 32px 28px;
+      gap: 18px;
+    }
+    .mobile-nav a {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+    }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-nav.open { display: flex; }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      position: relative;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10,26,16,0.92) 0%, rgba(10,26,16,0.6) 60%, rgba(10,26,16,0.2) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 140px 32px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-label::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 28px;
+      max-width: 700px;
+    }
+    .hero h1 .accent { color: var(--gold); display: block; }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--gold-dark);
+      color: var(--white);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #a84e22; }
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-scroll span {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    /* ===================== PRODUCT SECTION ===================== */
+    .product-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .product-image {
+      position: relative;
+      min-height: 560px;
+      background: linear-gradient(135deg, #1a3a2a 0%, #0f2318 100%);
+      overflow: hidden;
+    }
+    .product-content {
+      background: var(--green-mid);
+      padding: 72px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .product-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .product-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .product-origin {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .product-content p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .spec-item {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 14px 16px;
+    }
+    .spec-item .s-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+    .spec-item .s-val {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .spec-item .s-val.highlight { color: var(--gold); }
+    .product-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ===================== WHY US ===================== */
+    .why-us {
+      padding: 96px 0;
+      background: var(--cream);
+    }
+    .section-header { margin-bottom: 64px; }
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold-dark);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.1;
+      max-width: 560px;
+    }
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .pillar {
+      border-top: 2px solid var(--green-mid);
+      padding: 36px 36px 36px 0;
+    }
+    .pillar-num {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .pillar h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .pillar p {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.8;
+    }
+
+    /* ===================== DOCUMENTATION ===================== */
+    .docs-section {
+      padding: 96px 0;
+      background: var(--green-mid);
+    }
+    .docs-section .section-title { color: var(--white); }
+    .docs-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-top: 20px;
+    }
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 56px;
+    }
+    .doc-item {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding: 28px 28px 28px 0;
+    }
+    .doc-line {
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
+    .doc-item h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .doc-item p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+    }
+    .docs-footer {
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .docs-footer p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* ===================== MARKETS ===================== */
+    .markets-section {
+      padding: 96px 0;
+      background: var(--warm-gray);
+    }
+    .markets-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .market-card {
+      background: var(--white);
+      padding: 36px 32px;
+    }
+    .market-flag { font-size: 2rem; margin-bottom: 16px; }
+    .market-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .market-card .market-region {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .market-specs { display: flex; flex-direction: column; gap: 10px; }
+    .market-spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0ebe3;
+    }
+    .market-spec-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .market-spec-row .ms-label { color: var(--text-muted); }
+    .market-spec-row .ms-val { font-weight: 700; color: var(--text-dark); }
+    .market-priority {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 10px;
+      margin-top: 16px;
+    }
+    .priority-now { background: #d4edda; color: #155724; }
+    .priority-soon { background: #fff3cd; color: #856404; }
+    .priority-later { background: #f8d7da; color: #721c24; }
+
+    /* ===================== QUOTE FORM ===================== */
+    .quote-section {
+      padding: 96px 0;
+      background: var(--cream);
+    }
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .quote-info h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .quote-info p {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .contact-methods { display: flex; flex-direction: column; gap: 14px; }
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+    }
+    .contact-method .cm-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--green-mid);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .contact-method a { color: var(--gold-dark); font-weight: 700; }
+    .contact-method a:hover { text-decoration: underline; }
+    .form-card {
+      background: var(--white);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+    .form-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .form-card .form-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    .form-row { margin-bottom: 18px; }
+    .form-row label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 7px;
+    }
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e0d8cc;
+      background: var(--cream);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus { border-color: var(--green-mid); }
+    .form-row textarea { resize: vertical; min-height: 100px; }
+    .form-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--green-mid);
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--green-dark); }
+    .form-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    /* ===================== TRUST STRIP ===================== */
+    .trust-strip {
+      background: var(--green-dark);
+      padding: 20px 0;
+    }
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 0 24px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+    .trust-item .ti-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ===================== ABOUT ===================== */
+    .about-section {
+      padding: 96px 0;
+      background: var(--cream);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .about-link {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-dark);
+      border-bottom: 1px solid rgba(26,58,42,0.3);
+      padding-bottom: 3px;
+      margin-top: 16px;
+      transition: border-color 0.2s;
+    }
+    .about-link:hover { border-color: var(--text-dark); }
+    .about-visual {
+      position: relative;
+      height: 460px;
+      background: linear-gradient(135deg, #1a3a2a 0%, #0f2318 100%);
+      overflow: hidden;
+    }
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.8;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .footer-col { align-self: start; text-align: left; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+    .footer-links a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+    .footer-contact-item {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+    .footer-contact-item a { color: var(--gold); transition: opacity 0.2s; }
+    .footer-contact-item a:hover { opacity: 0.8; }
+    .footer-tagline {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+    }
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-bottom-links a {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+      transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ===================== WHATSAPP FLOAT ===================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    }
+    .whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 68px;
+      background: var(--green-dark);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+    /* ===================== SUCCESS MESSAGE ===================== */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px;
+      background: #d4edda;
+      color: #155724;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 900px) {
+      .product-section,
+      .quote-grid,
+      .about-grid { grid-template-columns: 1fr; }
+      .product-content { padding: 48px 32px; }
+      .pillars { grid-template-columns: 1fr; gap: 0; }
+      .pillar { padding: 28px 0; }
+      .docs-grid { grid-template-columns: 1fr 1fr; }
+      .markets-grid { grid-template-columns: 1fr; gap: 2px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .form-two-col { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .about-visual { height: 280px; }
+      .trust-inner { gap: 20px; }
+    }
+    @media (max-width: 600px) {
+      .docs-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas a, .hero-ctas .btn-whatsapp { width: 100%; text-align: center; justify-content: center; }
+      .form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="main-header">
+  <div class="header-inner">
+    <a href="#" class="logo"><img src="assets/logo_new.png" alt="Kavi Spices" style="height:110px;width:auto;object-fit:contain;" /></a>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#product">Products</a>
+      <a href="#markets">Markets</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Request Quote</a>
+    </nav>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Home</a>
+    <a href="#product">Products</a>
+    <a href="#markets">Markets</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" style="color: var(--gold); font-weight:700;">Request a Quote →</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="assets/hero image.png" alt="Indian spices" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label">GI Tagged · Single-Origin · Export Specialists</p>
+    <h1 class="font-heading">
+      India's Finest Spices.
+      <span class="accent">Delivered to the World.</span>
+    </h1>
+    <p class="hero-sub">
+      Kavi Spices exports premium GI tagged, single-origin Indian spices to international buyers.
+      Bulk B2B orders with full export documentation — FOB and CIF terms available.
+    </p>
+    <a href="#contact" class="btn-primary">Request a Quote →</a>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ===================== TRUST STRIP ===================== -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="ti-dot"></div>FSSAI Licensed</div>
+    <div class="trust-item"><div class="ti-dot"></div>IEC Registered</div>
+    <div class="trust-item"><div class="ti-dot"></div>APEDA Registered</div>
+    <div class="trust-item"><div class="ti-dot"></div>Spices Board CRES</div>
+    <div class="trust-item"><div class="ti-dot"></div>NABL-Accredited COA</div>
+    <div class="trust-item"><div class="ti-dot"></div>GI Tagged Spices — Govt of India</div>
+  </div>
+</div>
+
+<!-- ===================== PRODUCT ===================== -->
+<section class="product-section" id="product">
+  <div class="product-image">
+    <img src="assets/product-jar.webp" alt="Lakadong Turmeric Powder — Kavi Spices" style="width:100%;height:100%;object-fit:cover;display:block;min-height:560px;" />
+  </div>
+  <div class="product-content">
+    <div class="product-tags">
+      <span class="badge badge-gold">GI Tagged</span>
+      <span class="badge badge-outline">Featured Product</span>
+    </div>
+    <h2 class="font-heading">Lakadong Turmeric</h2>
+    <p class="product-origin">Jaintia Hills, Meghalaya · GI Tag #741</p>
+    <p>
+      The world's highest-curcumin turmeric variety, grown in the unique microclimate of Meghalaya's
+      Jaintia Hills. While commercial turmeric averages 2–3% curcumin, Lakadong consistently delivers
+      7–7.5% — making it the benchmark for premium turmeric globally.
+    </p>
+    <p>
+      Available in bulk for B2B and export orders. Steam sterilized, nitrogen-flushed packaging.
+      NABL-accredited third-party lab reports available with every order.
+    </p>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="s-label">Curcumin Content</div>
+        <div class="s-val highlight">7.5%+ (HPLC Tested)</div>
+      </div>
+      <div class="spec-item">
+        <div class="s-label">Aflatoxin</div>
+        <div class="s-val">&lt;10 ppb (UAE Standard)</div>
+      </div>
+      <div class="spec-item">
+        <div class="s-label">Minimum Order</div>
+        <div class="s-val">25 kg (Trial)</div>
+      </div>
+      <div class="spec-item">
+        <div class="s-label">HS Code</div>
+        <div class="s-val">09103030</div>
+      </div>
+      <div class="spec-item">
+        <div class="s-label">Packaging</div>
+        <div class="s-val">25 kg N₂-Flushed Bags</div>
+      </div>
+      <div class="spec-item">
+        <div class="s-label">Incoterms</div>
+        <div class="s-val">FOB / CIF Available</div>
+      </div>
+    </div>
+    <div class="product-ctas">
+      <a href="#contact" class="btn-primary">Enquire for Bulk</a>
+      <a href="#contact" class="btn-outline" style="border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.85);">Request Sample</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section class="why-us">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">The Kavi Difference</p>
+      <h2 class="section-title font-heading">Why importers choose us.</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3 class="font-heading">GI Tagged &amp; Single-Origin</h3>
+        <p>Every spice we export carries a Geographical Indication tag or verified single-origin provenance. Fully traceable from farm to shipment.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3 class="font-heading">NABL-Accredited Lab Testing</h3>
+        <p>Every batch is independently tested at NABL and ISO 17025 accredited labs — active compounds, aflatoxin, heavy metals, and moisture. Full COA provided with every commercial order.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3 class="font-heading">Export-Ready Documentation</h3>
+        <p>Phytosanitary certificates, Certificate of Origin, NABL COA, and shipping documentation prepared for every bulk order. Compliant with UAE, US, and EU import standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOCUMENTATION ===================== -->
+<section class="docs-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label" style="color:var(--gold)">Export Ready</p>
+      <h2 class="section-title font-heading" style="color:var(--white)">Full documentation.<br>Zero friction.</h2>
+      <p class="docs-sub">We handle the paperwork so your shipment clears customs without delays. All documents prepared to UAE, US, and EU import standards.</p>
+    </div>
+    <div class="docs-grid">
+      <div class="doc-item">
+        <div class="doc-line"></div>
+        <h4 class="font-heading">Phytosanitary Certificate</h4>
+        <p>Issued by State Agriculture Dept / APEDA. Required for all international shipments.</p>
+      </div>
+      <div class="doc-item">
+        <div class="doc-line"></div>
+        <h4 class="font-heading">Certificate of Origin</h4>
+        <p>Chamber of Commerce issued. Enables preferential duty under trade agreements.</p>
+      </div>
+      <div class="doc-item">
+        <div class="doc-line"></div>
+        <h4 class="font-heading">NABL Lab COA</h4>
+        <p>Active compound analysis, aflatoxin, heavy metals, moisture — NABL and ISO 17025 accredited report provided with every order.</p>
+      </div>
+      <div class="doc-item">
+        <div class="doc-line"></div>
+        <h4 class="font-heading">FOB &amp; CIF Terms</h4>
+        <p>Flexible Incoterms to suit your import requirements.</p>
+      </div>
+    </div>
+    <div class="docs-footer">
+      <p>Ready to place a bulk order? We offer FOB and CIF pricing with flexible minimum order quantities — starting from 25 kg for first-time buyers.</p>
+      <a href="#contact" class="btn-primary">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARKETS ===================== -->
+<section class="markets-section" id="markets">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Global Reach</p>
+      <h2 class="section-title font-heading">Markets we serve.</h2>
+    </div>
+    <div class="markets-grid">
+      <div class="market-card">
+        <h3 class="font-heading">UAE &amp; Middle East</h3>
+        <p class="market-region">Dubai · Abu Dhabi · Qatar · Saudi Arabia</p>
+        <div class="market-specs">
+          <div class="market-spec-row">
+            <span class="ms-label">Compliance</span>
+            <span class="ms-val">Halal + COA</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Transit</span>
+            <span class="ms-val">5–8 days (sea)</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Aflatoxin Limit</span>
+            <span class="ms-val">&lt;10 ppb</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">MOQ</span>
+            <span class="ms-val">25 kg trial</span>
+          </div>
+        </div>
+      </div>
+      <div class="market-card">
+        <h3 class="font-heading">North America</h3>
+        <p class="market-region">USA · Canada — California, New York, Ontario</p>
+        <div class="market-specs">
+          <div class="market-spec-row">
+            <span class="ms-label">Compliance</span>
+            <span class="ms-val">FDA Prior Notice + COA</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Transit</span>
+            <span class="ms-val">18–25 days (sea)</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Aflatoxin Limit</span>
+            <span class="ms-val">&lt;20 ppb (FDA)</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">MOQ</span>
+            <span class="ms-val">50 kg trial</span>
+          </div>
+        </div>
+      </div>
+      <div class="market-card">
+        <h3 class="font-heading">European Union</h3>
+        <p class="market-region">Netherlands · Germany · UK · France</p>
+        <div class="market-specs">
+          <div class="market-spec-row">
+            <span class="ms-label">Compliance</span>
+            <span class="ms-val">Phytosanitary + COA + ETO-Free</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Transit</span>
+            <span class="ms-val">20–28 days (sea)</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Aflatoxin Limit</span>
+            <span class="ms-val">&lt;10 ppb (EU)</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">MOQ</span>
+            <span class="ms-val">50 kg trial</span>
+          </div>
+        </div>
+      </div>
+      <div class="market-card">
+        <h3 class="font-heading">Asia Pacific</h3>
+        <p class="market-region">Singapore · Malaysia · Japan · South Korea · Australia</p>
+        <div class="market-specs">
+          <div class="market-spec-row">
+            <span class="ms-label">Compliance</span>
+            <span class="ms-val">COA + Phytosanitary</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Transit</span>
+            <span class="ms-val">7–14 days (sea)</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">Aflatoxin Limit</span>
+            <span class="ms-val">&lt;10 ppb</span>
+          </div>
+          <div class="market-spec-row">
+            <span class="ms-label">MOQ</span>
+            <span class="ms-val">25 kg trial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <p class="section-label">About Kavi Spices</p>
+        <h2 class="font-heading">A sourcing partner you can trust.</h2>
+        <p>
+          Kavi Spices was founded to bridge the gap between India's extraordinary GI tagged spice
+          heritage and international buyers who demand verified quality. We source directly from
+          farming communities across India, process with care, and export with
+          full documentation. Every batch is traceable from the village of origin to your warehouse.
+        </p>
+        <p>
+          Based in Bangalore, India. Registered exporter with IEC, APEDA, and Spices Board CRES.
+          MSME certified. Women-founded and led.
+        </p>
+        <a href="#contact" class="about-link">Get in touch →</a>
+      </div>
+      <div class="about-visual" style="overflow:hidden;">
+        <img src="assets/Sourcing partner.png" alt="Farming communities — Kavi Spices" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE FORM ===================== -->
+<section class="quote-section" id="contact">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="quote-info">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="font-heading">Request a quote or sample.</h2>
+        <p>
+          Whether you need pricing for a trial shipment or want to evaluate a sample before
+          committing — fill the form and we'll respond within 24 hours with our COA, spec
+          sheet, and FOB pricing.
+        </p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="cm-icon">✉</div>
+            <span>Email: <a href="mailto:contact@kavispices.com">contact@kavispices.com</a></span>
+          </div>
+          <div class="contact-method">
+            <div class="cm-icon" style="background:#25d366">
+              <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <span>WhatsApp: <a href="https://wa.me/919611834055" target="_blank">+91 96118 34055</a> — fastest response</span>
+          </div>
+          <div class="contact-method">
+            <div class="cm-icon">🌐</div>
+            <span>Web: <a href="https://kavispices.com">kavispices.com</a></span>
+          </div>
+        </div>
+        <div style="margin-top:32px;padding:20px 24px;background:var(--green-mid);color:rgba(255,255,255,0.85);font-size:0.82rem;line-height:1.7;">
+          <strong style="color:var(--gold);display:block;margin-bottom:8px;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase">What we send with every quote</strong>
+          NABL-accredited COA · Product spec sheet · FOB pricing ·
+          Sample availability · Delivery timeline
+        </div>
+      </div>
+      <div class="form-card">
+        <h3 class="font-heading">Request a Quote or Sample</h3>
+        <p class="form-sub">We respond within 24 hours with COA + pricing.</p>
+        <div data-fs-success id="formSuccess" class="form-success">
+          Thank you for your enquiry.<br>
+          We will respond within 24 hours with our COA, spec sheet, and FOB pricing.<br><br>
+          For faster response, WhatsApp us directly.
+        </div>
+        <div data-fs-error class="form-error-global"></div>
+
+        <form id="quoteForm" action="https://formspree.io/f/mzdqvkqo" method="POST">
+          <div class="form-two-col">
+            <div class="form-row">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="Full name" required data-fs-field />
+              <span data-fs-error="name" class="field-error"></span>
+            </div>
+            <div class="form-row">
+              <label for="company">Company Name *</label>
+              <input type="text" id="company" name="company" placeholder="Company" required data-fs-field />
+              <span data-fs-error="company" class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email">Business Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required data-fs-field />
+            <span data-fs-error="email" class="field-error"></span>
+          </div>
+          <div class="form-row">
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+971 or +1 or +44..." data-fs-field />
+            <span data-fs-error="whatsapp" class="field-error"></span>
+          </div>
+          <div class="form-row">
+            <label for="product">Product of Interest *</label>
+            <select id="product" name="product" required>
+              <option value="">Select product</option>
+              <option>Lakadong Turmeric Powder</option>
+              <option>Other / Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-two-col">
+            <div class="form-row">
+              <label for="country">Country *</label>
+              <select id="country" name="country" required>
+                <option value="">Select country</option>
+                <optgroup label="UAE & Middle East">
+                  <option>UAE</option>
+                  <option>Saudi Arabia</option>
+                  <option>Qatar</option>
+                  <option>Kuwait</option>
+                  <option>Bahrain</option>
+                  <option>Oman</option>
+                </optgroup>
+                <optgroup label="North America">
+                  <option>USA</option>
+                  <option>Canada</option>
+                </optgroup>
+                <optgroup label="European Union">
+                  <option>Germany</option>
+                  <option>Netherlands</option>
+                  <option>France</option>
+                  <option>UK</option>
+                </optgroup>
+                <optgroup label="Asia Pacific">
+                  <option>Singapore</option>
+                  <option>Malaysia</option>
+                  <option>Japan</option>
+                  <option>South Korea</option>
+                  <option>Australia</option>
+                </optgroup>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="quantity">Quantity Needed</label>
+              <select id="quantity" name="quantity">
+                <option value="">Select quantity</option>
+                <option>Sample only (250g–1kg)</option>
+                <option>Trial order — 25–50 kg (UAE · Asia Pacific)</option>
+                <option>Trial order — 50–100 kg (NA · EU)</option>
+                <option>Commercial — 100–500 kg</option>
+                <option>Commercial — 500 kg–1 MT</option>
+                <option>Commercial — 1 MT+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="message">Any specific requirements or questions?</label>
+            <textarea id="message" name="message" placeholder="e.g. certifications needed, delivery port, packaging requirements..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry</button>
+          <p class="form-note">By submitting this form you agree to be contacted regarding your enquiry.<br>No spam. We respond within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/logo_new.png" alt="Kavi Spices" style="height:100px;width:auto;object-fit:contain;" /></div>
+        <p class="footer-desc">
+          Premium GI tagged, single-origin Indian spices for international buyers.
+          Bulk B2B export with full trade documentation. Bangalore, India.
+        </p>
+        <div class="footer-tagline">GI Tagged · Single-Origin · Export Ready</div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <nav class="footer-links">
+          <a href="#">Home</a>
+          <a href="#product">Products</a>
+          <a href="#markets">Markets</a>
+          <a href="#about">About</a>
+          <a href="#contact">Request Quote</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            Email: <a href="mailto:contact@kavispices.com">contact@kavispices.com</a>
+          </div>
+          <div class="footer-contact-item">
+            WhatsApp: <a href="https://wa.me/919611834055" target="_blank">+91 96118 34055</a>
+          </div>
+          <div class="footer-contact-item">
+            Web: <a href="https://kavispices.com">kavispices.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kavi Spices LLP. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== WHATSAPP FLOAT ===================== -->
+<a class="whatsapp-float" href="https://wa.me/919611834055?text=Hi%2C%20I%20am%20interested%20in%20your%20spices%20from%20Kavi%20Spices." target="_blank" rel="noopener" aria-label="WhatsApp Kavi Spices">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+</a>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+  // Header scroll effect
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  menuBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('open'));
+  });
+
+  // Form submission — sends to Formspree silently, shows custom thank you message
+  const quoteForm = document.getElementById('quoteForm');
+  const formSuccess = document.getElementById('formSuccess');
+  const submitBtn = quoteForm.querySelector('button[type="submit"]');
+
+  quoteForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const data = new FormData(quoteForm);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mzdqvkqo', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        quoteForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Enquiry';
+        alert('Something went wrong. Please try again or WhatsApp us directly at +91 96118 34055.');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Enquiry';
+      alert('Network error. Please check your connection or WhatsApp us at +91 96118 34055.');
+    }
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
